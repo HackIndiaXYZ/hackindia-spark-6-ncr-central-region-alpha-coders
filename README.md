@@ -31,6 +31,24 @@
 - **Team Name**: Alpha Coders
 - **Repository**: [hackindia-spark-6-ncr-central-region-alpha-coders](https://github.com/HackIndiaXYZ/hackindia-spark-6-ncr-central-region-alpha-coders)
 
+### 👥 Team Members
+- **SHIVAM SONY** (Team Leader)
+- **Priyanshu Raj**
+- **Nandini Sagar**
+- **ASTHA JYOTI**
+
+## 📸 Mission Recon (Screenshots)
+
+<div align="center">
+  <img src="screenshots/lobby.png" alt="Lobby UI" width="800" />
+  <br />
+  <em>The immersive 3D Lobby UI where you select your mission and queue for matchmaking.</em>
+  <br /><br />
+  <img src="screenshots/training_grounds.png" alt="Training Grounds" width="800" />
+  <br />
+  <em>The Training Grounds where developers hone their algorithmic skills.</em>
+</div>
+
 ## 📌 About The Project
 
 Traditional coding platforms can feel solitary and monotonous. **CodeArena AI** revolutionizes how developers learn and practice by merging the intense, adrenaline-pumping aesthetics of AAA Battle Royale games with competitive programming. 
