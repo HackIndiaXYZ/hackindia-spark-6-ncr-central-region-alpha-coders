@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-code-darker text-white font-sans overflow-hidden m-0 p-0;
+  }
+}
+
+@layer utilities {
+  /* Dynamic Background Effects */
+  .bg-scanline {
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+    background-size: 100% 4px;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 50;
+    animation: scrollScanlines 10s linear infinite;
+  }
+
+  .ambient-glow {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: breatheGlow 4s ease-in-out infinite alternate;
+  }
+
+  /* Aggressive Clip-Path Borders used heavily in Battle Royales */
+  .clip-slant {
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  }
+
+  .clip-slant-heavy {
+    clip-path: polygon(25px 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%, 0 25px);
+  }
+  
+  .clip-triangle {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  }
+
+  /* 3D HUD Wrap Effect */
+  .hud-left {
+    transform: perspective(1000px) rotateY(15deg) translateZ(0px);
+  }
+  
+  .hud-right {
+    transform: perspective(1000px) rotateY(-15deg) translateZ(0px);
+  }
+
+  /* Intense Hover States */
+  .btn-glitch:hover {
+    animation: glitchAction 0.2s cubic-bezier(.25, .46, .45, .94) both infinite;
+    text-shadow: 2px 0 #00f3ff, -2px 0 #b026ff;
+  }
+  
+  .glow-text-heavy {
+    text-shadow: 0 0 15px rgba(0, 243, 255, 1), 0 0 30px rgba(0, 243, 255, 0.8);
+  }
+  .glow-text-gold-heavy {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+}
+
+/* Base keyframes */
+@keyframes scrollScanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+@keyframes breatheGlow {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+}
+
+@keyframes glitchAction {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+
+@keyframes floatAvatar {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.02); }
+}
+
+.animate-float {
+  animation: floatAvatar 6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f3ff;
+  border-radius: 0;
+}
