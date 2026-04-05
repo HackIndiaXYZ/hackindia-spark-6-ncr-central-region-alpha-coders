@@ -57,7 +57,7 @@ export default function Auth() {
           <div className="glass-panel p-10 w-full max-w-md z-10 mx-4 border-t-4 border-t-code-blue rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl relative overflow-hidden">
             <div className="text-center mb-8 relative z-10">
               <div className="w-20 h-20 bg-gradient-to-b from-black/80 to-black/20 rounded-2xl mx-auto flex items-center justify-center mb-6 border border-white/10 shadow-[0_0_20px_rgba(0,243,255,0.2)] hover:rotate-180 transition-transform duration-700 cursor-crosshair">
-                <Shield className="w-10 h-10 text-code-blue drop-shadow-[0_0_8px_rgba(0,243,255,0.8)] animate-pulse-fast" />
+                <img src="/logo.png" alt="CodeArena Logo" className="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(176,38,255,0.8)] animate-pulse-fast" />
               </div>
               <h1 className="text-4xl font-gaming font-black glow-text mb-2 tracking-widest leading-tight">
                 CODE ARENA

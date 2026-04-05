@@ -1,0 +1,12 @@
+{
+  "name": "code-arena",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=frontend & npm run start --workspace=backend",
+    "install:all": "npm install"
+  }
+}
